@@ -15,6 +15,7 @@ class RightCategory extends Model
         'name',
         'slug',
         'description',
+        'detailed_guide',
         'keywords',
         'order',
         'is_active',
