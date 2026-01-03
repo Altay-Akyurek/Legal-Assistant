@@ -1,59 +1,76 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ⚖️ Sanal Hukuk Asistanı (Omni-Bridge V10.0)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Sanal Hukuk Asistanı**, kullanıcıların yaşadıkları olayları doğal dille anlatabildikleri ve bu olayların hangi anayasal haklar, hukuk kategorileri ve ilgili kanunlarla ilişkili olduğunu saptayan gelişmiş bir analiz platformudur. 
 
-## About Laravel
+> [!IMPORTANT]
+> Bu proje bir **bilgilendirme aracıdır**. Profesyonel hukuk danışmanlığı yerine geçmez. Kullanıcılara hak arama süreçlerinde rehberlik eder.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 Öne Çıkan Özellikler
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **🤖 Omni-Bridge Analiz Motoru:** Hayatın her alanından (Trafik, Sağlık, Aile, Dijital vb.) 100+ senaryoyu saptayabilen anlamsal köprü.
+- **🗺️ Anayasal Eşleştirme:** Girilen olayı Türkiye Cumhuriyeti Anayasası'ndaki ilgili maddelerle otomatik olarak ilişkilendirir.
+- **📚 Sektörel Rehberler:** Tüketici hakları, iş hukuku, aile hukuku gibi alanlarda dinamik "Virtual Guide" (Sanal Rehber) desteği.
+- **⚖️ Kanun Desteği:** 4721 (Medeni Kanun), 6502 (Tüketici), 4857 (İş Kanunu) gibi temel kanun maddeleriyle desteklenen analizler.
+- **🛠️ Hyper-Resilience Mantığı:** Karmaşık cümle yapılarını ve anahtar kelimeleri anlamsal olarak normalize eden dayanıklı altyapı.
+- **💎 Premium Tasarım:** Glassmorphism etkileriyle donatılmış, modern ve kullanıcı dostu arayüz.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 🧠 Çalışma Mantığı ve Mimari
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Proje, veriyi işlemek için çok katmanlı bir mantıksal süreç kullanır:
 
-## Laravel Sponsors
+### 1. Anlamsal Normalizasyon (Semantic Normalization)
+Kullanıcının girdiği metin (örn: "Ev sahibi depozitomu vermiyor") öncelikle `EventAnalysisService` tarafından işlenir. Bu aşamada:
+- Metin küçük harfe dönüştürülür ve temizlenir.
+- Günlük terimler (örn: "kovulma") teknik hukuk terimlerine ("is calisma", "tazminat") dönüştürülür.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 2. Ağırlıklı Kategorizasyon (Weighted Categorization)
+Sistem, normalize edilmiş metin içerisinden anahtar kelimeleri ayıklar ve veritabanındaki 14 farklı hukuk kategorisiyle (`right_categories`) karşılaştırır. Eşleşme oranlarına göre %0-100 arası bir "relevance score" (ilgi skoru) hesaplanır.
 
-### Premium Partners
+### 3. Anayasa ve Kanun Eşleşmesi
+Eşleşen kategoriler üzerinden, o kategoriyle ilişkili olan anayasa maddeleri ve bu maddeleri destekleyen özel kanunlar (Supporting Laws) sorgulanır.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 4. Dinamik Rehber Sunumu
+Sistem, olaydaki bağlamı saptarsa kullanıcının doğrudan ne yapması gerektiğini söyleyen (örn: "THH'ye E-devlet üzerinden başvurun") bir rehber oluşturur.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🏗️ Teknik Mimari
 
-## Code of Conduct
+- **Framework:** Laravel 10 (PHP 8.2+)
+- **Veritabanı:** MySQL (İlişkisel Şema)
+- **Frontend:** Blade Templates, Vanilla CSS (Premium Modern Theme), JS
+- **Tasarım Deseni:** MVC + Service Layer (Business logic tamamen Service katmanındadır)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Veritabanı Şeması
+`setup_database.sql` dosyası ile kurulan yapı aşağıdaki ana tabloları içerir:
+- `right_categories`: Hukuk alanları ve anahtar kelimeleri.
+- `constitution_articles`: Anayasa maddeleri ve sadeleştirilmiş açıklamaları.
+- `supporting_laws`: Yardımcı kanunlar ve ilgili maddeleri.
+- `event_records`: Yapılan analizlerin anonim kayıtları.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🛠️ Kurulum
 
-## License
+1. Depoyu klonlayın: `git clone https://github.com/Altay-Akyurek/Legal-Assistant.git`
+2. Bağımlılıkları yükleyin: `composer install`
+3. `.env` dosyasını oluşturun ve veritabanı bilgilerinizi girin.
+4. Veritabanını hazırlayın:
+   - MySQL平台上创建一个数据库。
+   - `setup_database.sql` dosyasını içeri aktarın (V10.0 verileri ile birlikte gelir).
+5. Uygulama anahtarını oluşturun: `php artisan key:generate`
+6. Sunucuyu başlatın: `php artisan serve`
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 👨‍💻 Geliştirici
+**Altay Akyurek** tarafından hukuk okuryazarlığını artırmak ve hak arama süreçlerini kolaylaştırmak amacıyla geliştirilmiştir.
+
+---
+
+## 📄 Lisans
+Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
