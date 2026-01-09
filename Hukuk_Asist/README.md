@@ -40,7 +40,7 @@ Sistem, olaydaki bağlamı saptarsa kullanıcının doğrudan ne yapması gerekt
 
 ## 🏗️ Teknik Mimari
 
-- **Framework:** Laravel 10 (PHP 8.2+)
+- **Framework:** Laravel 12 (PHP 8.2+)
 - **Veritabanı:** MySQL (İlişkisel Şema)
 - **Frontend:** Blade Templates, Vanilla CSS (Premium Modern Theme), JS
 - **Tasarım Deseni:** MVC + Service Layer (Business logic tamamen Service katmanındadır)
@@ -58,12 +58,17 @@ Sistem, olaydaki bağlamı saptarsa kullanıcının doğrudan ne yapması gerekt
 
 1. Depoyu klonlayın: `git clone https://github.com/Altay-Akyurek/Legal-Assistant.git`
 2. Bağımlılıkları yükleyin: `composer install`
-3. `.env` dosyasını oluşturun ve veritabanı bilgilerinizi girin.
-4. Veritabanını hazırlayın:
-   - MySQL平台上创建一个数据库。
-   - `setup_database.sql` dosyasını içeri aktarın (V10.0 verileri ile birlikte gelir).
-5. Uygulama anahtarını oluşturun: `php artisan key:generate`
-6. Sunucuyu başlatın: `php artisan serve`
+3. `.env` dosyasını oluşturun: `cp .env.example .env`
+4. Veritabanı bilgilerini `.env` içine girin.
+5. Veritabanını hazırlayın:
+   - MySQL üzerinde bir veritabanı oluşturun.
+   - Verileri içe aktarmak için: `php artisan migrate --seed` (Tavsiye edilen)
+   - Veya `setup_database.sql` dosyasını manuel içeri aktarın.
+6. Uygulama anahtarını oluşturun: `php artisan key:generate`
+7. Sunucuyu başlatın: `php artisan serve`
+
+> [!TIP]
+> **Ücretsiz Kullanım:** Bu proje herhangi bir ücretli API (OpenAI, Gemini vb.) anahtarı gerektirmez. Kendi geliştirdiğimiz "Omni-Bridge" anlamsal eşleştirme motoru ile tamamen ücretsiz çalışır.
 
 ---
 
