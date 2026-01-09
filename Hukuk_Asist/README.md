@@ -1,5 +1,5 @@
-# ⚖️ Sanal Hukuk Asistanı (Omni-Bridge V10.0)
 
+<<<<<<< HEAD
 **Sanal Hukuk Asistanı**, kullanıcıların yaşadıkları olayları doğal dille anlatabildikleri ve bu olayların hangi anayasal haklar, hukuk kategorileri ve ilgili kanunlarla ilişkili olduğunu saptayan gelişmiş bir analiz platformudur. 
 
 > [!IMPORTANT]
@@ -79,3 +79,5 @@ Sistem, olaydaki bağlamı saptarsa kullanıcının doğrudan ne yapması gerekt
 
 ## 📄 Lisans
 Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+=======
+>>>>>>> 3d8cb5b395513ddc0f5f33feeab0e7e331e5f81a
